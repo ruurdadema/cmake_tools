@@ -2,7 +2,7 @@
 find_package(Git)
 
 execute_process(
-        COMMAND ${GIT_EXECUTABLE} describe --always --tags --dirty --match "v*"
+        COMMAND ${GIT_EXECUTABLE} describe --tags --dirty --match "v*"
         WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
         OUTPUT_VARIABLE GIT_DESCRIBE_VERSION
         RESULT_VARIABLE GIT_DESCRIBE_ERROR_CODE
