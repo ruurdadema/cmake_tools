@@ -10,7 +10,7 @@ execute_process(
 )
 
 if (GIT_DESCRIBE_ERROR_CODE)
-    # Often it happens that no tag is available. Most CI systems only checkout the git history with a certain depth
+    # It might happen that no tag is available. Most CI systems only checkout the git history with a certain depth
     # (ie. 50 commits). If the last tag is older than that, no tag is available and git describe will fail.
     message(FATAL_ERROR "Git describe returned an error: ${GIT_DESCRIBE_VERSION}")
 endif()
